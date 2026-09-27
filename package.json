@@ -1,0 +1,56 @@
+{
+  "name": "line-bot-ops-mcp",
+  "version": "0.1.0",
+  "description": "MCP server to operate your own LINE bot: webhook queue health, failed jobs and retries, push, Rich Menu, follower insight.",
+  "type": "module",
+  "bin": {
+    "line-bot-ops-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "schema.sql"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "line",
+    "line-bot",
+    "line-messaging-api",
+    "line-oa",
+    "supabase",
+    "webhook",
+    "queue",
+    "rich-menu",
+    "claude",
+    "ai-agent",
+    "thailand"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MankhongGarden/line-bot-ops-mcp.git"
+  },
+  "homepage": "https://github.com/MankhongGarden/line-bot-ops-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/MankhongGarden/line-bot-ops-mcp/issues"
+  },
+  "author": "MankhongGarden",
+  "license": "MIT"
+}
