@@ -67,10 +67,22 @@ naming the variable.
 ## Safety
 
 - Broadcast is off unless you opt in, because it messages every friend and can't be undone.
-- Every tool carries MCP annotations. Only push, Rich Menu changes, retries and broadcast are
-  marked as writes.
+- Every tool declares all four MCP hints (read-only, destructive, idempotent, open-world). Only
+  push, Rich Menu changes, retries and broadcast are marked as writes, and all but push are marked
+  destructive.
+- LINE IDs are validated (`U`/`C`/`R` + 32 hex, `richmenu-` + 32 hex) before anything is sent, so
+  tool input can't reach other LINE API paths.
+- The channel access token is only ever sent to `https://api.line.me`; the service role key only to
+  your own `SUPABASE_URL`.
 - `line_retry_job` only moves jobs that are `failed`. Reply tokens expire soon after the event, so
   a retried job that replies may fail again; push is the fallback.
+
+## Development
+
+```bash
+npm install
+npm test   # builds, then runs the tool contract tests with a mocked LINE API
+```
 
 ## Related
 
