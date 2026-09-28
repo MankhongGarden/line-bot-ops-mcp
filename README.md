@@ -91,6 +91,10 @@ npm test   # builds, then runs the tool contract tests with a mocked LINE API
 - [Surviving LINE's 5-second webhook timeout on Vercel](https://github.com/MankhongGarden/line-webhook-fast-ack-dispatcher-worker):
   why the queue exists.
 
+## Privacy
+
+Runs locally and collects nothing. See [PRIVACY.md](PRIVACY.md) for exactly what is sent where.
+
 ## License
 
 MIT
