@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "line-bot-ops": {
+      "command": "npx",
+      "args": ["-y", "line-bot-ops-mcp@0.2.0"],
+      "env": {
+        "LINE_CHANNEL_ACCESS_TOKEN": "${user_config.line_channel_access_token}",
+        "SUPABASE_URL": "${user_config.supabase_url}",
+        "SUPABASE_SERVICE_ROLE_KEY": "${user_config.supabase_service_role_key}",
+        "LINE_MCP_ALLOW_BROADCAST": "${user_config.allow_broadcast}"
+      }
+    }
+  }
+}

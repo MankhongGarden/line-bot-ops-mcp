@@ -1,0 +1,8 @@
+{
+  "name": "mankhonggarden",
+  "description": "Claude Code plugins by MankhongGarden for running LINE bots.",
+  "owner": { "name": "MankhongGarden", "email": "mankhong.garden@gmail.com" },
+  "plugins": [
+    { "name": "line-bot-ops", "source": "./plugin" }
+  ]
+}

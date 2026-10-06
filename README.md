@@ -54,6 +54,13 @@ With Claude Code:
 claude mcp add line-bot-ops -e LINE_CHANNEL_ACCESS_TOKEN=... -e SUPABASE_URL=... -e SUPABASE_SERVICE_ROLE_KEY=... -- npx -y line-bot-ops-mcp
 ```
 
+Or as a Claude Code plugin, which asks for the values below and adds a triage skill:
+
+```bash
+claude plugin marketplace add MankhongGarden/line-bot-ops-mcp
+claude plugin install line-bot-ops@mankhonggarden
+```
+
 | Variable | Required | |
 |---|---|---|
 | `LINE_CHANNEL_ACCESS_TOKEN` | for LINE tools | Long-lived channel access token |

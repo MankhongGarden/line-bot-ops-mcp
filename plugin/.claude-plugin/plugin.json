@@ -1,0 +1,45 @@
+{
+  "name": "line-bot-ops",
+  "displayName": "LINE Bot Ops",
+  "version": "0.1.0",
+  "description": "Operate your own LINE bot from Claude Code: webhook queue health, failed jobs and retries, push, Rich Menu, follower insight.",
+  "author": {
+    "name": "MankhongGarden",
+    "email": "mankhong.garden@gmail.com",
+    "url": "https://github.com/MankhongGarden"
+  },
+  "homepage": "https://github.com/MankhongGarden/line-bot-ops-mcp/tree/main/plugin",
+  "repository": "https://github.com/MankhongGarden/line-bot-ops-mcp",
+  "license": "MIT",
+  "keywords": ["line", "line-bot", "line-messaging-api", "rich-menu", "webhook", "supabase", "thailand"],
+  "privacyPolicyUrl": "https://github.com/MankhongGarden/line-bot-ops-mcp/blob/main/PRIVACY.md",
+  "supportUrl": "https://github.com/MankhongGarden/line-bot-ops-mcp/issues",
+  "userConfig": {
+    "line_channel_access_token": {
+      "type": "string",
+      "title": "LINE channel access token",
+      "description": "Long-lived channel access token from the LINE Developers console. Needed by the LINE tools.",
+      "sensitive": true,
+      "default": ""
+    },
+    "supabase_url": {
+      "type": "string",
+      "title": "Supabase URL",
+      "description": "https://<project>.supabase.co of the bot's database. Leave empty if the bot has no queue.",
+      "default": ""
+    },
+    "supabase_service_role_key": {
+      "type": "string",
+      "title": "Supabase service role key",
+      "description": "Needed by the queue tools. Leave empty if the bot has no queue.",
+      "sensitive": true,
+      "default": ""
+    },
+    "allow_broadcast": {
+      "type": "boolean",
+      "title": "Allow broadcast",
+      "description": "Register line_broadcast, which messages every friend and can't be undone.",
+      "default": false
+    }
+  }
+}
